@@ -1,0 +1,41 @@
+"""
+Practice Problem-03: class attributes vs instance attributes
+
+Concepts: a class attribute shared by all, instance attributes per object, precedence.
+
+Write a program with one class Song:
+Task-1: write the class with a class attribute app set to Tunefy and an
+    __init__ taking a title and an artist.
+Task-2: create s1 (Yesterday, The Beatles) and s2 (Hello, Adele), print
+    s1.app, then print Song.app straight from the class.
+Task-3: give s2 its own app value MyTunes, then print s2.app, s1.app and
+    Song.app, so the instance attribute wins for s2 while the others stay
+    Tunefy.
+
+Expected output:
+Tunefy
+Tunefy
+MyTunes
+Tunefy
+Tunefy
+"""
+
+# Task-1: the class, with a shared class attribute and per-object data
+class Song:
+    app = "Tunefy"
+
+    def __init__(self, title, artist):
+        self.title = title
+        self.artist = artist
+
+# Task-2: both songs, then the class attribute read from the object and from the class
+s1 = Song("Yesterday", "The Beatles")
+s2 = Song("Hello", "Adele")
+print(s1.app)
+print(Song.app)
+
+# Task-3: an instance attribute on s2 wins for s2 only
+s2.app = "MyTunes"
+print(s2.app)
+print(s1.app)
+print(Song.app)

@@ -1,0 +1,88 @@
+from expense_book import ExpenseBook
+from f1_is_valid_amount import is_valid_amount
+
+# before Step-11: f2 gave us one helper, format_row
+# from f2_format_row import format_row
+
+# after Step-11: Console comes from the installed package, make_table is the new helper in f2
+from rich.console import Console
+
+from f2_format_row import make_table
+
+
+def add_expense(book: ExpenseBook) -> None:
+    """Prompt the user for a new expense and add it to the book."""
+    description = input("Description: ").strip()
+
+    if description == "":
+        description = "(no description)"
+
+    amount_text = input("Amount: ").strip()
+
+    if not is_valid_amount(amount_text):
+        print("Invalid amount - enter a positive number like 12.50")
+        return
+
+    category = input("Category: ").strip().lower()
+
+    if category == "":
+        category = "uncategorized"
+
+    amount = float(amount_text)
+
+    expense = book.store_expense(description, amount, category)
+
+    print(f"Added: {expense.description} ({expense.amount:,.2f}) [{expense.category}]")
+
+
+def list_expenses(book: ExpenseBook) -> None:
+    """Display all recorded expenses."""
+    if not book.expenses:
+        print("No expenses yet.")
+        return
+
+    # before Step-11: a header line, then one printed row per expense
+    # print(f"{'Description':<20} {'Category':<14} {'Amount':>10}")
+    #
+    # for expense in book.expenses:
+    #     print(format_row(expense))
+
+    # after Step-11: one rich table instead of the printed lines
+    Console().print(make_table(book.expenses))
+
+
+def show_total(book: ExpenseBook) -> None:
+    """Display the total amount spent."""
+    print(f"Total spent: {book.compute_total():,.2f}")
+
+
+def show_by_category(book: ExpenseBook) -> None:
+    """Display the total spent in each category."""
+    totals = book.compute_by_category()
+
+    if not totals:
+        print("No expenses yet.")
+        return
+
+    for category, total in totals.items():
+        print(f"{category:<14} {total:>10,.2f}")
+
+
+def filter_by_category(book: ExpenseBook) -> None:
+    """Display expenses that belong to one category."""
+    wanted_category = input("Category to show: ").strip().lower()
+
+    matches = book.filter(wanted_category)
+
+    if not matches:
+        print(f"No expenses in '{wanted_category}'.")
+        return
+
+    # before Step-11: a header line, then one printed row per expense
+    # print(f"{'Description':<20} {'Category':<14} {'Amount':>10}")
+    #
+    # for expense in matches:
+    #     print(format_row(expense))
+
+    # after Step-11: one rich table instead of the printed lines
+    Console().print(make_table(matches))

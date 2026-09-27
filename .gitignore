@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+.ruff_cache/
+.mypy_cache/
+milestone-projects/*/*build-incremental*/data/
+milestone-projects/*/*solution*/data/
