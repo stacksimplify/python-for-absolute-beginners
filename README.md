@@ -12,7 +12,7 @@ Learn Python with 295+ concept demos, practice, functions, OOP, files, JSON, mod
 
 Learn Python from absolute zero and build a strong programming foundation through 295+ focused concept demos, hands-on practice, workshops, and real-world projects. This course is designed for complete beginners. No prior programming experience or Python knowledge is required. We start from the very basics and progressively build your Python skills, from your first program to functions, files, modules, packages, OOP, and complete Python projects.
 
-## The Course in Six Pictures
+## The Course in Pictures
 
 **What you get**
 
@@ -64,7 +64,7 @@ Learn Python from absolute zero and build a strong programming foundation throug
 | [12. Virtual Environments and Packaging](12-Virtual-Environments-and-Packaging/) | Modules, imports, packages, virtual environments, __name__ == "__main__", pyproject.toml, and how Python projects are structured and packaged. | 7 command-line steps | [Website](https://python-for-beginners.stacksimplify.com/12-virtual-environments-and-packaging/) |
 | [13. Classes and OOP Basics](13-Classes-and-OOP-Basics/) | Classes, objects, __init__, self, attributes, methods, __str__, __repr__, @classmethod, and @staticmethod. | 25 concept demos | [Website](https://python-for-beginners.stacksimplify.com/13-classes-and-oop-basics/) |
 
-Section pages from `04` onward are for enrolled students. Sections `01` to `03` are open to everyone.
+Every section page is free to read on the course website - no sign-in, no enrolment.
 
 ## Build Real Python Projects
 
