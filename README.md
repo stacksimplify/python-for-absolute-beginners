@@ -1,14 +1,10 @@
----
-title: "Python for Absolute Beginners: From Zero to Real Projects"
-description: "Learn Python with 295+ concept demos, practice, functions, OOP, files, JSON, modules, packages, and real-world projects. Runnable code, practice exercises with solutions, and slide PDFs for the StackSimplify course."
----
-
 # Python for Absolute Beginners: From Zero to Real Projects
 
 Learn Python with 295+ concept demos, practice, functions, OOP, files, JSON, modules, packages, and real-world projects.
 
 - **Get the course:** https://stacksimplify.com/courses/python-for-absolute-beginners
 - **Course website:** https://python-for-beginners.stacksimplify.com/
+- **Star this repo** if it helps you, so other beginners can find it.
 
 Learn Python from absolute zero and build a strong programming foundation through 295+ focused concept demos, hands-on practice, workshops, and real-world projects. This course is designed for complete beginners. No prior programming experience or Python knowledge is required. We start from the very basics and progressively build your Python skills, from your first program to functions, files, modules, packages, OOP, and complete Python projects.
 
